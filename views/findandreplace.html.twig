@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Find and Replace</title>
+    </head>
+    <body>
+        <h1>Do all the things</h1>
+        <form action="/findandreplace" method="get">
+            <label for="string">Enter a word or sentence</label>
+            <input type="text" name="string" id='string'>
+            <label for="word">Pick a word to replace</label>
+            <input type="text" name="word" id='word'>
+            <label for="replacement">Replacement Word</label>
+            <input type="text" name="replacement" id='replacement'>
+            <button type="submit">Replace!</button>
+        </form>
+            {% if results is not empty %}
+                <h2>Results</h2>
+                <p>{{ results }}</p>
+            {% endif %}
+    </body>
+</html>
