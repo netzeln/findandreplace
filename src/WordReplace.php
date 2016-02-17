@@ -49,9 +49,9 @@
 				$newString = $this->string;
 				$offset = 0;
 
-				while(strpos($newString, $this->word, $offset) !==  FALSE)
+				while(stripos($newString, $this->word, $offset) !==  FALSE)
 				{
-					$start = strpos($newString, $this->word, $offset);
+					$start = stripos($newString, $this->word, $offset);
 					$newString = substr_replace($newString, $this->replacement, $start, $lengthWord);
 					$offset = $start + $lengthReplacement;
 				}
