@@ -52,6 +52,18 @@
 			//Assert
 			$this->assertEquals('I am a bumblebee in a bumblebee kingdom', $result);
 		}
+
+		function test_findAndReplace_wordWithinotherword()
+		{
+			//Arrange
+			$test_wordReplace = new WordReplace("I catlog concatened muscats", "cat", "mouse");
+
+			//Act
+			$result = $test_wordReplace->findAndReplace();
+
+			//Assert
+			$this->assertEquals('I mouselog conmouseened musmouses', $result);
+		}
 	}
 
 ?>
